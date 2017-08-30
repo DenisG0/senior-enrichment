@@ -62,33 +62,33 @@ Use at least sequelize, express, react, and redux when creating this app. You ca
 
 ```
 GET
-- all campuses
-- a campus by id
-- all students
-- a student by id
+X all campuses
+X a campus by id
+X all students
+X a student by id
 ```
 
 ```
 POST
-- new campus
-- new student
+X new campus
+X new student
 ```
 
 ```
 PUT
-- updated student info for one student
-- updated campus info for one campus
+X updated student info for one student
+X updated campus info for one campus
 ```
 
 ```
 DELETE
-- a campus
-- a student
+X a campus
+X a student
 ```
 
 ### How to test functionality without a frontend
 - GET: use your browser
-- POST / PUT / DELETE : 
+- POST / PUT / DELETE :
  - CLI (command line interface) with `curl`
    - e.g. `curl -H "Content-Type: application/json" -X POST -d '{"username":"kate","password":"1234"}' http://localhost:3000/api/login`
    - `-H`: headers. `-X`: verb. `-d`: data (must be of the type specified in headers). http://[address]:[port]/[route_path]
