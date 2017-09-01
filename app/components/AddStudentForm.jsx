@@ -1,6 +1,4 @@
-import React ,{Component} from 'react';
-import { Route, Link } from 'react-router-dom';
-import axios from 'axios';
+import React, {Component} from 'react';
 
 
 export default class AddStudentForm extends Component {
@@ -38,8 +36,8 @@ export default class AddStudentForm extends Component {
     })
   }
 
-  handleSubmit (evt) {
-    evt.preventDefault();
+  handleSubmit () {
+
     this.props.add({
       name: this.state.studentName,
       email: this.state.studentEmail,
@@ -51,9 +49,9 @@ export default class AddStudentForm extends Component {
       studentGender: "",
     });
   }
-    render(){
 
-      console.log(this.state.studentGender, "STUDENT GENDER")
+
+  render(){
 
       return (
         <div >

@@ -11,6 +11,7 @@ export default class SinglePlaylist extends Component {
       student: []
     }
   this.handleDelete = this.handleDelete.bind(this)
+
   }
 
   componentDidMount(){
@@ -64,15 +65,15 @@ export default class SinglePlaylist extends Component {
                      <h5>{ user.Gender }</h5>
                      </td>
                       <td>
-                      <Link to = {`./planet/${user.campus.id}`}>
-                      <h5>{ user.campus.name }</h5>
+                      <Link to = { user.campus ? `./campus/${user.campus.id}` : `/campus`}>
+                      <h5>{user.campus ? user.campus.name : 'Unassigned' }</h5>
                       </Link>
                     </td>
                      <td>
                      <a href="#" className="btn btn-danger" onClick = {this.handleDelete(user.id)}  >Expell</a>
                     </td>
-                  </tr>
-                ))
+                    </tr>
+                  ))
               }
             </tbody>
             </table>

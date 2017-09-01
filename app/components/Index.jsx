@@ -24,8 +24,8 @@ export default class Main extends Component {
         <Switch>
               <Route exact path = "/" component= {Mainpage} />
               <Route exact path = "/user" component= {Students} />
-              <Route exact path = "/planet" component= {Planets} />
-              <Route path = "/planet/:planetId" component = {SinglePlanet} />
+              <Route exact path = "/campus" component= {Planets} />
+              <Route path = "/campus/:campusId" component = {SinglePlanet} />
               <Route path = '/user/:userId' component = {SingleStudent} />
          </Switch>
       </div>

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 
 
@@ -14,19 +14,23 @@ const Mainpage = () =>{
     'margin': "auto",
     'textAlign':'center',
     'height':'0px',
-    'fontStyle': 'oblique'
+    'fontFamily' : "Open Sans",
+    'color': '#fff',
+    'fontWeight': '700',
+    'textTransform': 'uppercase',
+    'animation': 'blur .75s ease-out infinite',
+    'textShadow': '0px 0px 5px #fff, 0px 0px 7px #fff'
   }
   const fit = {
-    'width':'80vw',
-    'height':'80vh'
+    'width':'100%',
+    'height':'auto'
   }
 
   return (
 
-    <div style = {fit}>
-
-       <img src = "https://i.ytimg.com/vi/qyEzsAy4qeU/maxresdefault_live.jpg" />
-       <Link to ="/planet"> <h1 style = {style}> Welcome to the Future</h1></Link>
+    <div >
+       <img src = "https://i.ytimg.com/vi/qyEzsAy4qeU/maxresdefault_live.jpg" style = {fit} />
+       <Link to ="/campus"> <h1 style = {style}> Welcome to the Future</h1></Link>
     </div>
 
   )

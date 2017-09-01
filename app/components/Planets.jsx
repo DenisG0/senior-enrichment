@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PlanetAddBar from './PlanetAddBar'
 
 export default class Planets extends Component {
@@ -32,27 +32,32 @@ export default class Planets extends Component {
             Planets: [...this.state.Planets, campus]
           })
       });
-}
+  }
 
   render(){
 
     const Planet = this.state.Planets
     console.log(Planet, "PLANETS")
+    const style = {
+      'marginLeft':'50px'
+    }
 
       return (
 
         <div>
         {
-         Planet.map( campus => {
-          var background = {
-            "backgroundImage": "url("+ campus.image +")",
-            "backgroundSize": "100%"
+        Planet.map( campus => {
+           var background = {
+              "backgroundImage": "url("+ campus.image +")",
+              "backgroundSize": "100%"
           }
           return (
             <div className = "jumbotron" key={campus.id} style={background} >
+            <div style={style}>
             <h1>{campus.name}</h1>
-            <p><Link to={`/planet/${campus.id}`}><a className="btn btn-primary btn-lg">Learn more</a></Link></p>
-           </div>
+            <p><Link to={`/campus/${campus.id}`}><a className="btn btn-primary btn-lg" onClick = {this.handClick}  >Learn more</a></Link></p>
+            </div>
+            </div>
             )})
          }
         <PlanetAddBar add= {this.addPlanet} />
